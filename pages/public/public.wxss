@@ -1,0 +1,12 @@
+.font24{
+  font-size:24rpx;
+}
+.font32{
+  font-size:32rpx;
+}
+.font34{
+  font-size:34rpx;
+}
+.bold{
+  font-weight:bold
+}

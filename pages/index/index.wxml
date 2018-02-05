@@ -1,0 +1,17 @@
+
+<view class='header'>
+    <button class='font24'  bindtap="lastMonth" disabled="{{isFirstDisabled}}" class='btn'> 上一月</button>
+    <view class='font34 bold'>{{nowDate}}</view>
+     <button class='font24'  bindtap="nextMonth" disabled="{{isLastDisabled}}" class='btn'> 下一月</button>
+</view>
+<view class='weekend'>
+   <view wx:for="{{weekendArr}}" wx:key=""  >{{item}}</view>
+</view>
+<view class='weekendBox'>
+  <view wx:for="{{firstEmpty}}" wx:key="" class='everyDay noEmpty'  >
+  {{item}}
+  </view>
+   <view wx:for="{{allday}}" wx:key="" data-id="{{index+1}}" class='everyDay noEmpty {{currentIndex==index+1?"active":""}}'  bindtap='chooseTime'>
+   {{item}}
+  </view>
+</view>
