@@ -1,13 +1,16 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+let flag = true
 Page({
   data: {
     motto: 'Hello World',
     nowDate: '',
+    monthDay:1,
     isDisabled: false,
+    isFirstDisabled:true,
     isLastDisabled:false,
+    lastMonth:0,
     currentIndex:1,
     arr1:[],
     dayArr: [],
@@ -88,38 +91,37 @@ Page({
   },
   // 上个月日历表渲染
   lastMonth: function () {
-    let nowMonth = this.data.nowMonth - 1
     let that = this
-    if (nowMonth< 0) {
+    let month = this.data.monthDay
+    let nowMonth = new Date().getMonth()
+    let monthDay = new Date().getDate()
+    if (this.data.nowMonth - this.data.lastMonth > 0) {
+      let lastMonth = this.data.nowMonth - 1
       that.setData({
-        isFirstDisabled: true
+        isFirstDisabled: false,
+        nowMonth: nowMonth,
+        currentIndex: monthDay,
+        isFirstDisabled: false,
+        isLastDisabled: false
       })
     } else {
       that.setData({
-        currentIndex: 1,
-        nowMonth: nowMonth,
-        isFirstDisabled: false,
-        isLastDisabled: false
+        isFirstDisabled: true
       })
     }
     this.initMonthDay(this.data.nowMonth)
   },
    // 下个月日历表渲染
   nextMonth: function () {
-    let nowMonth = this.data.nowMonth+1
-    let that = this;
-    if (nowMonth>=12){
-      that.setData({
-        isLastDisabled: true
-      })
-    } else if (nowMonth > 0 && nowMonth < 12){
-      that.setData({
-        currentIndex: 1,
-        nowMonth: nowMonth,
-        isLastDisabled: false,
-        isFirstDisabled: false
-      })
-    }
+    let nextMonth = this.data.nowMonth+1
+    let lastMonth = this.data.nowMonth
+    this.setData({
+      currentIndex: 1,
+      nowMonth: nextMonth,
+      isLastDisabled: true,
+      isFirstDisabled: false,
+      lastMonth: lastMonth
+    })
     this.initMonthDay(this.data.nowMonth)
   },
   onLoad: function () {
@@ -127,7 +129,9 @@ Page({
     let nowMonth = new Date().getMonth()
     this.setData({
       nowMonth: nowMonth,
-      currentIndex: monthDay
+      monthDay: monthDay,
+      currentIndex: monthDay,
+      lastMonth: nowMonth-1
     })
     this.initMonthDay(nowMonth)
 
