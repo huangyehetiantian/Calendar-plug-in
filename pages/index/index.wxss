@@ -1,54 +1,20 @@
-.font24{
-  font-size:24rpx;
+@import "../public/public.wxss";
+.banner-img{
+  width:100%;
 }
-.font32{
+.content{
+  padding:20rpx 20rpx;
+  box-sizing:border-box;
   font-size:32rpx;
 }
-.font34{
-  font-size:34rpx;
-}
-.bold{
-  font-weight:bold
-}
-page{
-  padding: 0 10rpx;
-  box-sizing:border-box
-}
-.header{
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom:1px solid #eee;
-  line-height:100rpx;
-}
-.weekend{
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
-  line-height:150rpx;
-  border-bottom:1px solid #eee
-}
-.everyDay{
-  width:13%;
-  height:100rpx;
-  margin-right:10rpx;
-  margin-bottom:10rpx;
+.arrow{
+  width:100rpx;
+  height:80rpx;
   display:inline-block;
-  text-align:center;
-  cursor:pointer;
-  transition:all 0.3s ease-in-out
+  text-align: right
 }
-.noEmpty{
-  line-height:100rpx;
-  border-radius:100%;
-  color:black;
-}
-.active{
-  background:#5d8dda;
-  color:white;
-}
-.btn{
-  background:white;
-  font-size:14px;
-  border:none
+.changeDestinationIcon{
+  width:50rpx;
+  height:50rpx;
+  vertical-align:middle
 }

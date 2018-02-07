@@ -1,0 +1,5 @@
+<!--pages/my/index.wxml-->
+<!-- <text>关注</text> -->
+<view class='content'>
+ <button  type="primary" bindtap="login" class='btn'>使用微信登录</button>
+</view>

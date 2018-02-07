@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "cpage": "^1.0.6",
+    "wepy-cli": "^1.7.0"
+  }
+}

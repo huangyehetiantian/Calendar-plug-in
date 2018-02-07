@@ -10,3 +10,37 @@
 .bold{
   font-weight:bold
 }
+.btn{
+  font-size:32rpx;
+  margin-top:20px;
+}
+.border{
+  border-bottom:1px solid #eee;
+}
+.flex{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height:80rpx;
+}
+.inline{
+  display:inline
+}
+.font24{
+  font-size:24rpx;
+}
+.silver{
+  color:silver
+}
+.mt10{
+  margin-top:10px;
+}
+.btn{
+  font-size:32rpx;
+  margin-top:20px;
+}
+.content{
+  padding:20rpx 20rpx;
+  box-sizing:border-box;
+  font-size:32rpx;
+}

@@ -1,17 +1,15 @@
-
-<view class='header'>
-    <button class='font24'  bindtap="lastMonth" disabled="{{isFirstDisabled}}" class='btn'> 上一月</button>
-    <view class='font34 bold'>{{nowDate}}</view>
-     <button class='font24'  bindtap="nextMonth" disabled="{{isLastDisabled}}" class='btn'> 下一月</button>
-</view>
-<view class='weekend'>
-   <view wx:for="{{weekendArr}}" wx:key=""  >{{item}}</view>
-</view>
-<view class='weekendBox'>
-  <view wx:for="{{firstEmpty}}" wx:key="" class='everyDay noEmpty'  >
-  {{item}}
+<image src="../img/timg.jpg"  class="banner-img"> </image>
+<view class='content'>
+  <view class='flex border'>
+    <view bindtap='goArea'>{{fromCity}}</view>
+    <view class='changeIcon' bindtap="changeDestination"><image src='../img/change.png' class="changeDestinationIcon"></image></view>
+    <view bindtap='backArea'>{{toCity}}</view>
   </view>
-   <view wx:for="{{allday}}" wx:key="" data-id="{{index+1}}" class='everyDay noEmpty {{currentIndex==index+1?"active":""}}'  bindtap='chooseTime'>
-   {{item}}
+   <view class='flex border'>
+    <view bindtap="timeChoose" >{{monthValue}}月{{dayValue}}日
+       <view class='inline silver font24'>周{{weekday}}</view> 
+    </view>
+    <view bindtap="timeChoose" class='arrow'> 》 </view>
   </view>
+  <button type="primary" class='btn' bindtap="serchInfo">查询</button>
 </view>
