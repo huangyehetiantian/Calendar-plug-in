@@ -1,3 +1,7 @@
-<!--pages/closer/index.wxml-->
-<!-- <text>pages/closer/index.wxml</text> -->
-关注页面占位符
+
+<!-- <image src="../img/closer.png"  /> -->
+ <button  type="primary" bindtap="createNewImg" class='btn'>请选择背景</button>
+ <view class="containerBox {{imagePath.length>0?'show':'hide'}}">
+        <image bindtap="previewImg" mode="scaleToFill" class="img" src="{{imagePath}}"></image>
+    </view>
+  <canvas canvas-id='myCanvas' style='opacity:0'></canvas>
