@@ -1,5 +1,11 @@
 <!--pages/my/index.wxml-->
 <!-- <text>关注</text> -->
-<view class='content'>
+<!-- <view class='content'>
  <button  type="primary" bindtap="login" class='btn'>使用微信登录</button>
-</view>
+</view> -->
+<image src='../img/phone.png'  animation="{{phoneAnimation}}"  class=' custom  {{showCustomFlag?"phoneIcon":""}} ' bindtap="makePhone"></image>
+<image src='../img/weixin.png' class=' custom {{showCustomFlag?"weixinIcon":""}} ' bindtap="contactCustom" ></image>
+
+
+ <image src='../img/closeIcon.png' class='custom' wx:if="{{showCustomFlag}}"  bindtap="openCustom"></image> 
+ <image src='../img/girlPhoto.png' class='custom ' bindtap="openCustom"  wx:else></image> 

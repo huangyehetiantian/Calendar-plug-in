@@ -1,3 +1,28 @@
-<!--pages/template/areaChose/index.wxml-->
-<!-- <text>pages/template/areaChose/index.wxml</text> -->
-此处为地区搜索模板占位符
+<view class="serchTop">
+   <input placeholder="中文/拼音/首字母" auto-focus class='input' placeholder-style="font-size:28rpx;text-align:center;"/>
+</view>
+<view class='containerBox'>
+  <view class='title'>当前</view>
+  <view class='tabBox' >
+      <span wx:for="{{currentCity}}" wx:key="" class='tabItem'>{{item}}</span>
+  </view>
+  <view class='title'>热门城市</view>
+  <view class='tabBox' >
+      <span wx:for="{{currentCity}}" wx:key="" class='tabItem'>{{item}}</span>
+  </view>
+   <view class='title'>历史选择</view>
+  <view class='tabBox' >
+      <span wx:for="{{currentCity}}" wx:key="" class='tabItem'>{{item}}</span>
+  </view>
+   <view class='title'>A</view>
+  <view class='tabBox' >
+      <span wx:for="{{currentCity}}" wx:key="" class='tabItem'>{{item}}</span>
+  </view>
+     <view class='title'>B</view>
+  <view class='tabBox' >
+      <span wx:for="{{currentCity}}" wx:key="" class='tabItem'>{{item}}</span>
+  </view>
+</view>
+<view class='rightTips'>
+  <span wx:for="{{letters}}"  wx:key=""  class="tipItem">{{item}}</span>
+</view>

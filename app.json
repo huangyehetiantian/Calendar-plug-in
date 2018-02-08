@@ -11,12 +11,12 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#5d8eda",
     "navigationBarTitleText": "出行管家",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "#fff"
   },
   "tabBar": {
-    "backgroundColor": "#eee",
+    "backgroundColor": "#f6f8f9",
     "selectedColor": "#2092e4",
     "list": [
       {

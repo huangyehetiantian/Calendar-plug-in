@@ -1,2 +1,18 @@
 /* pages/my/index.wxss */
 @import "../public/public.wxss";
+.custom{
+  width:80rpx;
+  height:80rpx;
+  border-radius:100%;
+  position:fixed;
+  right:10rpx;
+  bottom:10rpx;
+  transition:all linear  0.3s
+}
+.phoneIcon{
+  right:50rpx;
+  bottom:100rpx;
+}
+.weixinIcon{
+  right:120rpx;
+}
